@@ -1,1 +1,34 @@
-# hwwl-1
+# 简介
+- Ry H2 vs ws一键安装脚本
+  
+## 功能
+
+- 无脑回车一键安装或者自定义安装
+
+## 需求
+
+- Linux operating system
+- Bash shell
+- Internet connection
+
+
+
+
+|项目||
+|:--|:--|
+|程序|**/root/sbox/sing-box**|
+|服务端配置|**/root/sbox/sbconfig_server.json**|
+|重启|`systemctl restart sing-box`|
+|状态|`systemctl status sing-box`|
+|查看日志|`journalctl -u sing-box -o cat -e`|
+|实时日志|`journalctl -u sing-box -o cat -f`|
+
+warp解锁v4 v6等操作自行使用warp-go脚本
+具体操作就不说了
+```
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/warp-go.sh && bash warp-go.sh
+```
+
+## Credit
+- [sing-reality-box](https://github.com/deathline94/sing-REALITY-Box)
+- [sing-box](https://github.com/SagerNet/sing-box)
