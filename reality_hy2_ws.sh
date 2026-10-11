@@ -272,7 +272,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:        
-  - name: VLESS
+  - name: 线路2-VLESS
     type: vless
     server: $server_ip
     port: $current_listen_port
@@ -287,7 +287,7 @@ proxies:
       public-key: $public_key
       short-id: $short_id
 
-  - name: Hysteria2
+  - name: 线路1-Hysteria2
     type: hysteria2
     server: $server_ip
     port: $hy_current_listen_port
