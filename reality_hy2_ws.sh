@@ -150,7 +150,7 @@ show_client_configuration() {
   show_notice "VLESS 通用链接" 
   echo ""
   echo ""
-  server_link="vless://$uuid@$server_ip:$current_listen_port?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$current_server_name&fp=chrome&pbk=$public_key&sid=$short_id&type=tcp&headerType=none#线路2-$server_ip"
+  server_link="vless://$uuid@$server_ip:$current_listen_port?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$current_server_name&fp=chrome&pbk=$public_key&sid=$short_id&type=tcp&headerType=none#线路②-$server_ip"
   echo ""
   echo ""
   echo "$server_link"
@@ -176,7 +176,7 @@ show_client_configuration() {
   hy_password=$(jq -r '.inbounds[1].users[0].password' /root/sbox/sbconfig_server.json)
   # Generate the link
   
-  hy2_server_link="hysteria2://$hy_password@$server_ip:$hy_current_listen_port?insecure=1&sni=$hy_current_server_name#线路1-$server_ip"
+  hy2_server_link="hysteria2://$hy_password@$server_ip:$hy_current_listen_port?insecure=1&sni=$hy_current_server_name#线路①-$server_ip"
 
   show_notice "Hysteria2 通用链接" 
   echo ""
@@ -272,7 +272,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:        
-  - name: 线路2-VLESS
+  - name: 线路②-VLESS
     type: vless
     server: $server_ip
     port: $current_listen_port
@@ -287,7 +287,7 @@ proxies:
       public-key: $public_key
       short-id: $short_id
 
-  - name: 线路1-Hysteria2
+  - name: 线路①-Hysteria2
     type: hysteria2
     server: $server_ip
     port: $hy_current_listen_port
@@ -305,8 +305,8 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 线路2-VLESS
-      - 线路1-Hysteria2
+      - 线路②-VLESS
+      - 线路①-Hysteria2
 
   - name: 自动选择
     type: url-test #选出延迟最低的线路
