@@ -311,8 +311,8 @@ proxy-groups:
   - name: 自动选择
     type: url-test #选出延迟最低的线路
     proxies:
-      - 线路2-VLESS
-      - 线路1-Hysteria2
+      - 线路②-VLESS
+      - 线路①-Hysteria2
     url: "https://www.google.cn"
     interval: 300
     tolerance: 50
