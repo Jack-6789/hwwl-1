@@ -313,7 +313,7 @@ proxy-groups:
     proxies:
       - 线路②-VLESS
       - 线路①-Hysteria2
-    url: "https://www.google.cn"
+    url: "https://www.google.com"
     interval: 300
     tolerance: 50
 
