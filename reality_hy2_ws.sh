@@ -304,19 +304,8 @@ proxy-groups:
   - name: 线路选择
     type: select
     proxies:
-      - 自动选择
       - 线路②-VLESS
       - 线路①-Hysteria2
-
-  - name: 自动选择
-    type: url-test #选出延迟最低的线路
-    proxies:
-      - 线路②-VLESS
-      - 线路①-Hysteria2
-    url: "https://www.google.com"
-    interval: 300
-    tolerance: 50
-
 
 rules:
     - GEOIP,LAN,DIRECT
